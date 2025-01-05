@@ -1,0 +1,19 @@
+-- AlterTable
+ALTER TABLE "users" ALTER COLUMN "birthday" SET DATA TYPE TIMESTAMP(3),
+ALTER COLUMN "createdAt" SET DATA TYPE TIMESTAMP(3),
+ALTER COLUMN "updatedAt" DROP DEFAULT,
+ALTER COLUMN "updatedAt" SET DATA TYPE TIMESTAMP(3),
+ALTER COLUMN "deletedAt" SET DATA TYPE TIMESTAMP(3),
+ALTER COLUMN "emailbirthdaysentat" SET DATA TYPE TIMESTAMP(3);
+
+-- CreateTable
+CREATE TABLE "logs" (
+    "id" SERIAL NOT NULL,
+    "email" TEXT NOT NULL,
+    "message" TEXT NOT NULL,
+    "status" INTEGER NOT NULL,
+    "retries" INTEGER NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT "logs_pkey" PRIMARY KEY ("id")
+);
