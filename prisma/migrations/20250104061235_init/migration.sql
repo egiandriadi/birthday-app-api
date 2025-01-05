@@ -10,8 +10,7 @@ CREATE TABLE "users" (
     "updatedAt" TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedBy" TEXT,
     "deletedAt" TIMESTAMP,
-    "deletedBy" TEXT
+    "deletedBy" TEXT,
+    "emailbirthdaysentat" TIMESTAMP
 );
 
--- CreateIndex
--- CREATE UNIQUE INDEX "users_email_key" ON "users"("email");

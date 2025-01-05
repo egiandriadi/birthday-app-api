@@ -129,7 +129,7 @@ Ensure you are using the latest version of Node.js.
 Run the following command to migrate the database schema:
 
 ``` bash
-npx prisma migrate
+npx prisma migrate dev
 ```
 
 **Seed the Database (Optional)**
